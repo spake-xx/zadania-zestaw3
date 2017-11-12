@@ -18,7 +18,7 @@ public class Zad5 {
         while(temp>0){
             zm_modul[i] = temp%2;
             temp/=2;
-            i++;
+            if(temp!=0) i++;
         }
 
         System.out.println("Liczba "+liczba+" w ZM:");
@@ -37,13 +37,14 @@ public class Zad5 {
                 System.out.print(zm_modul[j]);
             }
         }
+        System.out.println();
 
         System.out.println("Liczba "+liczba+" w ZU2:");
         System.out.print(znak+".");
         int[] zm2 = new int[32];
         if(znak==1) {
             boolean changed = false;
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j <= i; j++) {
                 if (zm_modul[j] == 1 && !changed) {
                     changed = true;
                 } else {
